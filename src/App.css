@@ -14,10 +14,34 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 .customPad {
-  padding-top: 15rem;
+  padding-top: 10rem;
+}
+
+.itemCount {
+  margin:1rem;
+  padding: 0.5rem;
+  width: 220px;
+  border-radius: 0.75rem;
+  border: solid 1px #969696
+}
+
+.countContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.count {
+  display: flex;
+  align-items: center;
 }
 
 .textItem {
