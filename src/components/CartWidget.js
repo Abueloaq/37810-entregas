@@ -7,7 +7,7 @@ const CartWidget = () => {
     return (
         <div>
             <a className="cartLink" href="#4">
-                <Badge badgeContent={''} className='text-light' >
+                <Badge badgeContent={'4'} className='text-light' >
                     <ShoppingCartIcon />
                 </Badge>
             </a>

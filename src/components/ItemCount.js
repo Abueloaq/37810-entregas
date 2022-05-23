@@ -23,17 +23,17 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
         <div className="itemCount">
             <div className="countContainer">
                 <div>
-                    <button type="button" class="btn btn-outline-secondary" onClick={decrement}>-</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={decrement}>-</button>
                 </div>
                 <div className="px-5 count">
-                    <h5 class="text-light">{Count}</h5>
+                    <h5 className="text-dark">{Count}</h5>
                 </div>
                 <div>
-                    <button type="button" class="btn btn-outline-secondary" onClick={increment}>+</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={increment}>+</button>
                 </div>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-secondary" onClick={onAdd}>Agregar al Carrito</button>
+                <button type="button" className="btn btn-outline-secondary" onClick={onAdd}>Agregar al Carrito</button>
             </div>
         </div>
     );
