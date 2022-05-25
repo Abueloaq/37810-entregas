@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react"
 import ItemList from "./ItemList"
-import { getData } from "../mocks/FakeApi"
+import { getData } from "../mocks/FakeApi" 
 
 const ItemListContainer = () => {
     
@@ -25,6 +25,7 @@ const ItemListContainer = () => {
                 </div>
             </div>
                 {loading ? <div className="spinner text-start"></div> : <ItemList listaProductos={listaProductos}/>}
+
         </div>
     )
 }

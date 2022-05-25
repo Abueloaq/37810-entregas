@@ -10,15 +10,34 @@ const productos = [
 ]
 
 
-export const getData = new Promise ((resolve, reject) => {
+const getData = new Promise ((resolve, reject) => {
 
+    let condition = true
+
+        if(condition){
+            resolve(productos);
+        }else{
+            reject('Algo salió mal');
+        }
+    
+})
+
+
+
+const getItem = new Promise ((resolve, reject) => {
+    let inter ={}
     let condition = true
     setTimeout(()=>{
         if(condition){
-            resolve(productos);
+            resolve(inter = productos.find(inter => inter.id === 1));
         }else{
             reject('Algo salió mal');
         }
     },2000)
     
 })
+
+export default getItem;
+export {
+    getData
+}

@@ -70,6 +70,23 @@ hr {
   justify-content: space-evenly;
 }
 
+.bgDetail {
+  background: radial-gradient(circle, rgba(67,67,67,1) 0%, rgba(0,0,0,1) 100%);
+  min-height: 100vh;
+}
+
+.productDetail {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.imgDetail {
+  width: 90vw;
+  text-align: center;
+}
+
 /* Spinner */
 
 .spinner {
@@ -158,3 +175,10 @@ hr {
     transform: rotate(360deg);
   }
 }
+
+@media (min-width: 576px) {
+  .imgDetail {
+    width: 55vw;
+  }
+}
+
