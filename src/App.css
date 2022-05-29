@@ -87,6 +87,15 @@ hr {
   text-align: center;
 }
 
+.nav-item {
+  padding: 0rem 1rem;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none !important;
+}
+
 /* Spinner */
 
 .spinner {

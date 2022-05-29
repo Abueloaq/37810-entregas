@@ -1,20 +1,23 @@
 
 import React, { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
-import { getData } from "../mocks/FakeApi" 
+import { productos } from "../mocks/FakeApi" 
+import customFetch from "./customFetch"
 
 const ItemListContainer = () => {
     
     const [listaProductos, setListaProductos]= useState([])
     const [loading, setLoading]= useState(false)
-    
+    const {id} = useParams();
+
     useEffect(()=>{
         setLoading(true)
-        getData
+        customFetch(2000, id===undefined? productos : productos.filter(item => item.category === parseInt(id)))
             .then((res)=> setListaProductos(res))
             .catch((error)=> {console.log(error)})
             .finally(()=> setLoading(false))
-    }, [])
+    }, [id])
     
     return (
         <div className="body">
