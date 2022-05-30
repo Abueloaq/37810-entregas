@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+
+
+# Willebald-Photo
+***
+Willebald-Photo se trata de la solucion e-commerce para un estudio de fotografía que ofrece impresiones únicas de sus obras en distintos formatos. Está enfocado en la personalización por parte del cliente final, quien podra elegir su obra favorita y combinarlo con el formato deseado. Se busca un formato estético sobrio y una funcionalidad enfocada en la mejor UX.
+La estructura del proyecto puede ser adecuada para su uso en otros e-commerce con minimos cambios esteticos y es escalable a proyectos de mayor volumen.
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
