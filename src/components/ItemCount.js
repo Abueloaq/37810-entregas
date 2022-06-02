@@ -10,14 +10,9 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
     };
             
     const decrement = () => {
-        if (Count > 1)setCount(Count-1);
+        if (Count > 0)setCount(Count-1);
     };
 
-    onAdd = () => {
-        if (Count <= stock) {    
-            console.log(Count)
-        }
-    }
 
     return (
         <div className="itemCount ">
@@ -33,7 +28,9 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
                 </div>
             </div>
             <div>
-                <button type="button" className="btn btn-outline-secondary text-light" onClick={onAdd}>Agregar al Carrito</button>
+                { Count === 0 ? <button type="button" className="btn btn-secondary text-light" disabled>Agregar al Carrito</button> :
+                    <button type="button" className="btn btn-outline-secondary text-light" onClick={(e) => {e.stopPropagation();onAdd(Count)}}>Agregar al Carrito</button>
+                }
             </div>
         </div>
     );

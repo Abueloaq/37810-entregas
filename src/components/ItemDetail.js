@@ -1,9 +1,17 @@
 
 import React from "react"
 import ItemCount from "./ItemCount"
+import CheckoutButton from "./CheckoutButton"
+import { useState } from "react"
 
 const ItemDetail = ({producto}) => {
     const {name, img, description} = producto
+    const [itemcount, setItemCount] = useState(0);
+
+    const onAdd =(cantidad)=>{
+        setItemCount(cantidad)
+        
+    }
 
     return (
         <>
@@ -23,7 +31,9 @@ const ItemDetail = ({producto}) => {
                                 <p className="lead">{description}</p>
                             </div>
                         </div>
-                        <ItemCount stock={producto.stock} initial={1}/>
+
+                        {   itemcount === 0?
+                            <ItemCount stock={producto.stock} initial={itemcount} onAdd={onAdd}/> : <CheckoutButton />}
                     </>
                 }
             </div>

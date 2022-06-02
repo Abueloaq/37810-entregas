@@ -1,16 +1,17 @@
 
 import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Link } from "react-router-dom"
 
 
 const CartWidget = () => {
     return (
         <div>
-            <a className="cartLink" href="#4">
+            <Link to={`/cart`} className="text-light text-decoration-none">
                 <Badge badgeContent={'4'} className='text-light' >
                     <ShoppingCartIcon />
                 </Badge>
-            </a>
+            </Link>
         </div>
     )
 }
