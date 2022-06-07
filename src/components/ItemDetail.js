@@ -1,16 +1,18 @@
 
-import React from "react"
+import React, { useContext } from "react"
 import ItemCount from "./ItemCount"
 import CheckoutButton from "./CheckoutButton"
 import { useState } from "react"
+import { CartContext } from "./CartContext"
 
 const ItemDetail = ({producto}) => {
-    const {name, img, description} = producto
+    const {name, img, description, id, price} = producto
     const [itemcount, setItemCount] = useState(0);
+    const { addItem } = useContext(CartContext)
 
     const onAdd =(cantidad)=>{
         setItemCount(cantidad)
-        
+        addItem({id, price, name, cantidad, img})
     }
 
     return (
