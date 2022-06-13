@@ -1,9 +1,9 @@
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "./ItemDetail"
-import customFetch from "./customFetch"
-const {productos} = require('../mocks/FakeApi');
+import ItemDetail from "./ItemDetail";
+import { firestoreFetchSingle } from "../utils/firebaseFetch";
+
 
 const ItemDetailContainer =()=>{
 
@@ -13,7 +13,7 @@ const ItemDetailContainer =()=>{
 
     useEffect(()=>{
         setLoading(true)
-        customFetch(2000, productos.find(item => item.id === parseInt(id)))
+        firestoreFetchSingle(id)
             .then(res => setProducto(res))
             .catch (err => console.log(err))
             .finally(()=> setLoading(false))

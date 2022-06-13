@@ -29,7 +29,7 @@ const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         setAddChange(addChange + 1)
-        const result = compra.filter(el => el.id !== parseInt(id))
+        const result = compra.filter(el => el.id !== id)
         setCompra(result)
     }
 
