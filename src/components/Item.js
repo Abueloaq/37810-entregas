@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 
 const Item = ({producto})=> {
-    const {id, name, img, description} = producto
+    const {id, name, img} = producto
 
     return (
         <>
@@ -10,7 +10,6 @@ const Item = ({producto})=> {
             <img src={img} className="card-img-top" alt={name} />
                 <div className="card-body">
                     <h5 className="card-title text-light">{name}</h5>
-                    <p className="card-text text-light">{description}</p>
                     <Link to={`/item/${id}`} className="text-light text-decoration-none">Detalles</Link>
                 </div>
         </div>

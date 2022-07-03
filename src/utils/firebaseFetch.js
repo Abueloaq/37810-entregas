@@ -30,3 +30,15 @@ export const firestoreFetchSingle = async (itemId) => {
         console.log("El producto no existe")
     }
 }
+
+export const firestoreFetchCat = async () => {
+
+    let q = query(collection(db, "category"));
+    
+    const querySnapshot = await getDocs(q);
+    const dataFromFirestore = querySnapshot.docs.map(document => ({
+        ...document.data()
+    }));
+    return dataFromFirestore;
+}
+

@@ -1,11 +1,20 @@
 
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { firestoreFetchCat } from "../utils/firebaseFetch";
+import CategoryItem from "./CategoryItem";
 
 const Navbar = () => {
 
+  const [listaCategorias, setListaCategorias]= useState([])
   const [isActive, setIsActive] = useState(false);
+
+  useEffect(()=>{
+    firestoreFetchCat()
+      .then((res)=> setListaCategorias(res))
+      .catch((error)=> {console.log(error)})
+  }, [])
 
   const handleClick = event => {
     setIsActive(current => !current);
@@ -21,15 +30,7 @@ const Navbar = () => {
                 </button>
                 <div className={isActive ? 'navbar-collapse px-3 justify-content-end' : 'collapse navbar-collapse px-3 justify-content-end'} id="navbarNav">
                   <ul className="navbar-nav">
-                    <li className="nav-item">
-                      <Link to="/" className="nav-link">Inicio</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/category/1" className="nav-link">Simple Frames</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/category/2" className="nav-link">Triple Frames</Link>
-                    </li>
+                  {listaCategorias.map((category) =><CategoryItem key={category.id} category={category}/>)}
                   </ul>
                   <CartWidget />
                 </div>

@@ -13,7 +13,7 @@ const ItemListContainer = () => {
 
     useEffect(()=>{
         setLoading(true)
-        firestoreFetch(parseInt(id))
+        firestoreFetch(id)
             .then((res)=> setListaProductos(res))
             .catch((error)=> {console.log(error)})
             .finally(()=> setLoading(false))

@@ -10,7 +10,7 @@ const CartProvider = ({ children }) => {
     
     
 
-    const addItem = ({id, price, name, cantidad, img}) =>{
+    const addItem = ({id, price, name, cantidad, img, stock}) =>{
         
         setAddChange(addChange + 1)
 
@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
                 }
             })
         }
-        if (found) { findDuplicated(found, compra)} else {setCompra([...compra, {id, price, name, cantidad, img}])}
+        if (found) { findDuplicated(found, compra)} else {setCompra([...compra, {id, price, name, cantidad, img, stock}])}
         
     }
 

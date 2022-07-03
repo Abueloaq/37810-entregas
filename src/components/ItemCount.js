@@ -18,13 +18,13 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
         <div className="itemCount ">
             <div className="countContainer">
                 <div>
-                    <button type="button" className="btn btn-outline-secondary text-light" onClick={decrement}>-</button>
+                    <button type="button" className="btn btn-outline-secondary text-light btn-adding" onClick={decrement}>-</button>
                 </div>
                 <div className="px-5 count">
                     <h5 className="text-light">{Count}</h5>
                 </div>
                 <div>
-                    <button type="button" className="btn btn-outline-secondary text-light" onClick={increment}>+</button>
+                    <button type="button" className="btn btn-outline-secondary text-light btn-adding" onClick={increment}>+</button>
                 </div>
             </div>
             <div>

@@ -6,13 +6,13 @@ import { useState } from "react"
 import { CartContext } from "./CartContext"
 
 const ItemDetail = ({producto}) => {
-    const {name, img, description, id, price} = producto
+    const {name, img, description, id, price, stock} = producto
     const [itemcount, setItemCount] = useState(0);
     const { addItem } = useContext(CartContext)
 
     const onAdd =(cantidad)=>{
         setItemCount(cantidad)
-        addItem({id, price, name, cantidad, img})
+        addItem({id, price, name, cantidad, img, stock})
     }
 
     return (
@@ -35,7 +35,7 @@ const ItemDetail = ({producto}) => {
                         </div>
 
                         {   itemcount === 0?
-                            <ItemCount stock={producto.stock} initial={itemcount} onAdd={onAdd}/> : <CheckoutButton />}
+                            <ItemCount stock={stock} initial={itemcount} onAdd={onAdd}/> : <CheckoutButton />}
                     </>
                 }
             </div>
