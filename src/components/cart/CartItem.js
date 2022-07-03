@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { CartContext } from "./CartContext"
+import { CartContext } from "../context/CartContext"
 import { Trash3 } from 'react-bootstrap-icons';
 
 const CartItem = ({producto})=> {

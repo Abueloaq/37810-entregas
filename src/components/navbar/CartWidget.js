@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { CartFill, CartX } from 'react-bootstrap-icons';
 import { Link } from "react-router-dom"
-import { CartContext } from "./CartContext"
+import { CartContext } from "../context/CartContext"
 
 const CartWidget = () => {
 

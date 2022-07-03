@@ -1,9 +1,9 @@
 
 import { useState, useContext } from 'react';
-import { CartContext } from "./CartContext"
+import { CartContext } from "../context/CartContext"
 import { collection, serverTimestamp, setDoc, doc, updateDoc, increment } from "firebase/firestore";
-import db from "../utils/firebaseConfig";
-import { provider } from "../utils/authGoogleProviderCreate"
+import db from "../../utils/firebaseConfig";
+import { provider } from "../../utils/authGoogleProviderCreate"
 import { getAuth, signInWithPopup, signOut } from "firebase/auth";
 
 const Checkout = () => {

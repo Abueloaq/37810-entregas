@@ -3,7 +3,7 @@ import React, { useContext } from "react"
 import ItemCount from "./ItemCount"
 import CheckoutButton from "./CheckoutButton"
 import { useState } from "react"
-import { CartContext } from "./CartContext"
+import { CartContext } from "../context/CartContext"
 
 const ItemDetail = ({producto}) => {
     const {name, img, description, id, price, stock} = producto
