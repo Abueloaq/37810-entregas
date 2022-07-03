@@ -28,7 +28,7 @@ const Cart = ()=> {
                     <h5 className="text-light">IVA USD {(totalPrice - subTotal).toFixed(2)}</h5>
                 </div>
                 <h3 className="text-light">TOTAL USD {totalPrice}</h3>
-                <Link to="/checkout"><button type="button" className="btn btn-outline-light text-light">Go to Checkout</button></Link>
+                <Link to="/checkout"><button type="button" className="btn btn-outline-secondary text-light">Go to Checkout</button></Link>
             </div>
             <button type="button" className="btn btn-outline-danger text-light" onClick={(e) => {e.stopPropagation();clear()}}>Vaciar</button>
         </div>}

@@ -163,7 +163,7 @@ const Checkout = () => {
                 </div>
                     :
                     <div>
-                        <button type="button" className="btn btn-outline-light text-light" onClick={authResult}>Inicia sesión con Google</button>
+                        <button type="button" className="btn btn-outline-secondary text-light" onClick={authResult}>Inicia sesión con Google</button>
                         <hr></hr>
                         <p className="text-light">or</p>
                         <hr></hr>
@@ -212,7 +212,7 @@ const Checkout = () => {
                                     <h5 className="text-light">IVA USD {(totalPrice - subTotal).toFixed(2)}</h5>
                                 </div>
                                 <h3 className="text-light">TOTAL USD {totalPrice}</h3>
-                                <button type="button" className="btn btn-outline-light text-light" onClick={createOrder}>Checkout Now</button>
+                                <button type="button" className="btn btn-outline-info text-light" onClick={createOrder}>Checkout Now</button>
                             </div>
                         </div>
                         
